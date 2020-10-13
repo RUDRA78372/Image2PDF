@@ -31,3 +31,5 @@ Create PDF: Creates the PDF
 
 The program may look stuck while making the pdf if you have a lot of images to include.
 This is normal and you don't need to panic, just wait for a while until it finishes.
+
+Created using SynPDF
