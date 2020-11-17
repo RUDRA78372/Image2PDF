@@ -119,6 +119,7 @@ begin
       lPDF.Canvas.DrawXObject(0, 0, Image1.Picture.width, Image1.Picture.Height,
         'Image' + inttostr(i));
       ProgressBar1.Position := i;
+      Application.ProcessMessages;
     end;
     lPDF.SaveToFile(Edit2.Text);
     lPDF.Free;
