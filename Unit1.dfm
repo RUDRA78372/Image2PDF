@@ -4,8 +4,8 @@ object Form1: TForm1
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Image2PDF'
-  ClientHeight = 384
-  ClientWidth = 594
+  ClientHeight = 510
+  ClientWidth = 771
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -39,8 +39,8 @@ object Form1: TForm1
     Visible = False
   end
   object Label3: TLabel
-    Left = 501
-    Top = 369
+    Left = 677
+    Top = 489
     Width = 86
     Height = 13
     Caption = 'Created by Rudra'
@@ -48,7 +48,7 @@ object Form1: TForm1
   object Label4: TLabel
     Left = 0
     Top = 0
-    Width = 594
+    Width = 771
     Height = 33
     Align = alTop
     Alignment = taCenter
@@ -64,13 +64,13 @@ object Form1: TForm1
   object Edit1: TEdit
     Left = 94
     Top = 45
-    Width = 412
+    Width = 588
     Height = 21
     TabOrder = 0
   end
   object Button1: TButton
-    Left = 512
-    Top = 45
+    Left = 688
+    Top = 42
     Width = 75
     Height = 25
     Caption = 'Browse...'
@@ -78,8 +78,8 @@ object Form1: TForm1
     OnClick = Button1Click
   end
   object Button2: TButton
-    Left = 512
-    Top = 70
+    Left = 688
+    Top = 72
     Width = 75
     Height = 25
     Caption = 'Browse...'
@@ -89,20 +89,20 @@ object Form1: TForm1
   object Edit2: TEdit
     Left = 94
     Top = 72
-    Width = 412
+    Width = 588
     Height = 21
     TabOrder = 3
   end
   object ListBox1: TListBox
     Left = 8
     Top = 176
-    Width = 579
-    Height = 187
+    Width = 755
+    Height = 307
     ItemHeight = 13
     TabOrder = 4
   end
   object Button3: TButton
-    Left = 498
+    Left = 674
     Top = 145
     Width = 89
     Height = 25
@@ -194,7 +194,7 @@ object Form1: TForm1
   object ProgressBar1: TProgressBar
     Left = 119
     Top = 145
-    Width = 373
+    Width = 549
     Height = 25
     TabOrder = 14
   end
@@ -217,11 +217,9 @@ object Form1: TForm1
     OnClick = Button9Click
   end
   object OpenPictureDialog1: TOpenPictureDialog
-    Left = 528
-    Top = 8
+    Left = 216
   end
   object SaveDialog1: TSaveDialog
-    Left = 448
-    Top = 8
+    Left = 176
   end
 end

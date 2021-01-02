@@ -90,8 +90,9 @@ begin
   if TDirectory.Exists(Extractfiledir(Edit2.Text)) and
     (ListBox1.Items.Count >= 1) then
   begin
+  try
     ProgressBar1.Min := 0;
-    ProgressBar1.Max := ListBox1.Items.Count - 1;
+    ProgressBar1.Max := ListBox1.Items.Count;
     lPDF := TPdfDocument.Create;
     if ComboBox1.ItemIndex = -1 then
       lPDF.DefaultPaperSize := psA4
@@ -121,9 +122,13 @@ begin
       ProgressBar1.Position := i;
       Application.ProcessMessages;
     end;
+  finally
     lPDF.SaveToFile(Edit2.Text);
     lPDF.Free;
     Showmessage('PDF Generated');
+    Listbox1.Items.SaveToFile('Image2PDF.list');
+  end;
+    
   end;
 end;
 
@@ -176,6 +181,12 @@ end;
 procedure TForm1.FormCreate(Sender: TObject);
 begin
   DragAcceptFiles(Handle, true);
+  if Fileexists('Image2PDF.list') then
+   try
+     Listbox1.Items.LoadFromFile('Image2PDF.list');
+   except
+     Listbox1.Items.Clear;
+   end;
 end;
 
 procedure TForm1.WMDropFiles(var Msg: TWMDropFiles);
